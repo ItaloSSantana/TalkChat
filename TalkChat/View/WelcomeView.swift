@@ -6,7 +6,7 @@
 
 import UIKit
 
-class MainScreenView: UIView {
+class WelcomeView: UIView {
     
     let logoImageView: UIImageView = {
        let imageView = UIImageView()
