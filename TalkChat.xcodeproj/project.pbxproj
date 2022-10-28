@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6452EA46290C55AE00FCFA37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA45290C55AE00FCFA37 /* AppDelegate.swift */; };
+		6452EA48290C55AE00FCFA37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA47290C55AE00FCFA37 /* SceneDelegate.swift */; };
+		6452EA4A290C55AE00FCFA37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA49290C55AE00FCFA37 /* ViewController.swift */; };
+		6452EA4F290C55B100FCFA37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6452EA4E290C55B100FCFA37 /* Assets.xcassets */; };
+		6452EA52290C55B100FCFA37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6452EA50290C55B100FCFA37 /* LaunchScreen.storyboard */; };
+		6452EA5D290C55B200FCFA37 /* TalkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA5C290C55B200FCFA37 /* TalkChatTests.swift */; };
+		6452EA68290C55B200FCFA37 /* TalkChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA67290C55B200FCFA37 /* TalkChatUITests.swift */; };
+		64B8F45A290C586D00904602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64B8F459290C586D00904602 /* GoogleService-Info.plist */; };
+		64B8F45F290C5B0A00904602 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8F45E290C5B0A00904602 /* MainScreenView.swift */; };
+		64B8F464290C5B3100904602 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8F463290C5B3100904602 /* Constants.swift */; };
+		7CB743183DEEDF27D6AF58FA /* Pods_TalkChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E28EA70AA8782CDB502EF9 /* Pods_TalkChat.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6452EA59290C55B200FCFA37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6452EA3A290C55AE00FCFA37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6452EA41290C55AE00FCFA37;
+			remoteInfo = TalkChat;
+		};
+		6452EA64290C55B200FCFA37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6452EA3A290C55AE00FCFA37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6452EA41290C55AE00FCFA37;
+			remoteInfo = TalkChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6452EA42290C55AE00FCFA37 /* TalkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6452EA45290C55AE00FCFA37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6452EA47290C55AE00FCFA37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6452EA49290C55AE00FCFA37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6452EA4E290C55B100FCFA37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6452EA51290C55B100FCFA37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6452EA53290C55B100FCFA37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6452EA58290C55B200FCFA37 /* TalkChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6452EA5C290C55B200FCFA37 /* TalkChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkChatTests.swift; sourceTree = "<group>"; };
+		6452EA5E290C55B200FCFA37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6452EA63290C55B200FCFA37 /* TalkChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6452EA67290C55B200FCFA37 /* TalkChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkChatUITests.swift; sourceTree = "<group>"; };
+		6452EA69290C55B200FCFA37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64B8F459290C586D00904602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		64B8F45E290C5B0A00904602 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		64B8F463290C5B3100904602 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		73AD3ABFF71C8CE31F1B1E9E /* Pods-TalkChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkChat.debug.xcconfig"; path = "Target Support Files/Pods-TalkChat/Pods-TalkChat.debug.xcconfig"; sourceTree = "<group>"; };
+		A7E28EA70AA8782CDB502EF9 /* Pods_TalkChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C976F0B321F9B992B3F20D61 /* Pods-TalkChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkChat.release.xcconfig"; path = "Target Support Files/Pods-TalkChat/Pods-TalkChat.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6452EA3F290C55AE00FCFA37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CB743183DEEDF27D6AF58FA /* Pods_TalkChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6452EA55290C55B200FCFA37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6452EA60290C55B200FCFA37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29EB139D867F5FCADD9376FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73AD3ABFF71C8CE31F1B1E9E /* Pods-TalkChat.debug.xcconfig */,
+				C976F0B321F9B992B3F20D61 /* Pods-TalkChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6452EA39290C55AE00FCFA37 = {
+			isa = PBXGroup;
+			children = (
+				6452EA44290C55AE00FCFA37 /* TalkChat */,
+				6452EA5B290C55B200FCFA37 /* TalkChatTests */,
+				6452EA66290C55B200FCFA37 /* TalkChatUITests */,
+				6452EA43290C55AE00FCFA37 /* Products */,
+				29EB139D867F5FCADD9376FF /* Pods */,
+				6DE6AE46ACB8349BAF50D865 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6452EA43290C55AE00FCFA37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6452EA42290C55AE00FCFA37 /* TalkChat.app */,
+				6452EA58290C55B200FCFA37 /* TalkChatTests.xctest */,
+				6452EA63290C55B200FCFA37 /* TalkChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6452EA44290C55AE00FCFA37 /* TalkChat */ = {
+			isa = PBXGroup;
+			children = (
+				6452EA45290C55AE00FCFA37 /* AppDelegate.swift */,
+				6452EA47290C55AE00FCFA37 /* SceneDelegate.swift */,
+				6452EA49290C55AE00FCFA37 /* ViewController.swift */,
+				6452EA4E290C55B100FCFA37 /* Assets.xcassets */,
+				6452EA50290C55B100FCFA37 /* LaunchScreen.storyboard */,
+				6452EA53290C55B100FCFA37 /* Info.plist */,
+				64B8F459290C586D00904602 /* GoogleService-Info.plist */,
+				64B8F45E290C5B0A00904602 /* MainScreenView.swift */,
+				64B8F463290C5B3100904602 /* Constants.swift */,
+			);
+			path = TalkChat;
+			sourceTree = "<group>";
+		};
+		6452EA5B290C55B200FCFA37 /* TalkChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				6452EA5C290C55B200FCFA37 /* TalkChatTests.swift */,
+				6452EA5E290C55B200FCFA37 /* Info.plist */,
+			);
+			path = TalkChatTests;
+			sourceTree = "<group>";
+		};
+		6452EA66290C55B200FCFA37 /* TalkChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6452EA67290C55B200FCFA37 /* TalkChatUITests.swift */,
+				6452EA69290C55B200FCFA37 /* Info.plist */,
+			);
+			path = TalkChatUITests;
+			sourceTree = "<group>";
+		};
+		6DE6AE46ACB8349BAF50D865 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7E28EA70AA8782CDB502EF9 /* Pods_TalkChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6452EA41290C55AE00FCFA37 /* TalkChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6452EA6C290C55B200FCFA37 /* Build configuration list for PBXNativeTarget "TalkChat" */;
+			buildPhases = (
+				7065E6E6463BCC8CA460DAAE /* [CP] Check Pods Manifest.lock */,
+				6452EA3E290C55AE00FCFA37 /* Sources */,
+				6452EA3F290C55AE00FCFA37 /* Frameworks */,
+				6452EA40290C55AE00FCFA37 /* Resources */,
+				03F768452F27054CA21F895E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TalkChat;
+			productName = TalkChat;
+			productReference = 6452EA42290C55AE00FCFA37 /* TalkChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6452EA57290C55B200FCFA37 /* TalkChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6452EA6F290C55B200FCFA37 /* Build configuration list for PBXNativeTarget "TalkChatTests" */;
+			buildPhases = (
+				6452EA54290C55B200FCFA37 /* Sources */,
+				6452EA55290C55B200FCFA37 /* Frameworks */,
+				6452EA56290C55B200FCFA37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6452EA5A290C55B200FCFA37 /* PBXTargetDependency */,
+			);
+			name = TalkChatTests;
+			productName = TalkChatTests;
+			productReference = 6452EA58290C55B200FCFA37 /* TalkChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6452EA62290C55B200FCFA37 /* TalkChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6452EA72290C55B200FCFA37 /* Build configuration list for PBXNativeTarget "TalkChatUITests" */;
+			buildPhases = (
+				6452EA5F290C55B200FCFA37 /* Sources */,
+				6452EA60290C55B200FCFA37 /* Frameworks */,
+				6452EA61290C55B200FCFA37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6452EA65290C55B200FCFA37 /* PBXTargetDependency */,
+			);
+			name = TalkChatUITests;
+			productName = TalkChatUITests;
+			productReference = 6452EA63290C55B200FCFA37 /* TalkChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6452EA3A290C55AE00FCFA37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					6452EA41290C55AE00FCFA37 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					6452EA57290C55B200FCFA37 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6452EA41290C55AE00FCFA37;
+					};
+					6452EA62290C55B200FCFA37 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6452EA41290C55AE00FCFA37;
+					};
+				};
+			};
+			buildConfigurationList = 6452EA3D290C55AE00FCFA37 /* Build configuration list for PBXProject "TalkChat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6452EA39290C55AE00FCFA37;
+			productRefGroup = 6452EA43290C55AE00FCFA37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6452EA41290C55AE00FCFA37 /* TalkChat */,
+				6452EA57290C55B200FCFA37 /* TalkChatTests */,
+				6452EA62290C55B200FCFA37 /* TalkChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6452EA40290C55AE00FCFA37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6452EA52290C55B100FCFA37 /* LaunchScreen.storyboard in Resources */,
+				6452EA4F290C55B100FCFA37 /* Assets.xcassets in Resources */,
+				64B8F45A290C586D00904602 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6452EA56290C55B200FCFA37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6452EA61290C55B200FCFA37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03F768452F27054CA21F895E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TalkChat/Pods-TalkChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TalkChat/Pods-TalkChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TalkChat/Pods-TalkChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7065E6E6463BCC8CA460DAAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TalkChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6452EA3E290C55AE00FCFA37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B8F464290C5B3100904602 /* Constants.swift in Sources */,
+				6452EA4A290C55AE00FCFA37 /* ViewController.swift in Sources */,
+				6452EA46290C55AE00FCFA37 /* AppDelegate.swift in Sources */,
+				6452EA48290C55AE00FCFA37 /* SceneDelegate.swift in Sources */,
+				64B8F45F290C5B0A00904602 /* MainScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6452EA54290C55B200FCFA37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6452EA5D290C55B200FCFA37 /* TalkChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6452EA5F290C55B200FCFA37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6452EA68290C55B200FCFA37 /* TalkChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6452EA5A290C55B200FCFA37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6452EA41290C55AE00FCFA37 /* TalkChat */;
+			targetProxy = 6452EA59290C55B200FCFA37 /* PBXContainerItemProxy */;
+		};
+		6452EA65290C55B200FCFA37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6452EA41290C55AE00FCFA37 /* TalkChat */;
+			targetProxy = 6452EA64290C55B200FCFA37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6452EA50290C55B100FCFA37 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6452EA51290C55B100FCFA37 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6452EA6A290C55B200FCFA37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6452EA6B290C55B200FCFA37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6452EA6D290C55B200FCFA37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73AD3ABFF71C8CE31F1B1E9E /* Pods-TalkChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalkChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ItaloSantana.TalkChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6452EA6E290C55B200FCFA37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C976F0B321F9B992B3F20D61 /* Pods-TalkChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalkChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ItaloSantana.TalkChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6452EA70290C55B200FCFA37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalkChatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ItaloSantana.TalkChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkChat.app/TalkChat";
+			};
+			name = Debug;
+		};
+		6452EA71290C55B200FCFA37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalkChatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ItaloSantana.TalkChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkChat.app/TalkChat";
+			};
+			name = Release;
+		};
+		6452EA73290C55B200FCFA37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalkChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ItaloSantana.TalkChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TalkChat;
+			};
+			name = Debug;
+		};
+		6452EA74290C55B200FCFA37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalkChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ItaloSantana.TalkChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TalkChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6452EA3D290C55AE00FCFA37 /* Build configuration list for PBXProject "TalkChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6452EA6A290C55B200FCFA37 /* Debug */,
+				6452EA6B290C55B200FCFA37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6452EA6C290C55B200FCFA37 /* Build configuration list for PBXNativeTarget "TalkChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6452EA6D290C55B200FCFA37 /* Debug */,
+				6452EA6E290C55B200FCFA37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6452EA6F290C55B200FCFA37 /* Build configuration list for PBXNativeTarget "TalkChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6452EA70290C55B200FCFA37 /* Debug */,
+				6452EA71290C55B200FCFA37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6452EA72290C55B200FCFA37 /* Build configuration list for PBXNativeTarget "TalkChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6452EA73290C55B200FCFA37 /* Debug */,
+				6452EA74290C55B200FCFA37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6452EA3A290C55AE00FCFA37 /* Project object */;
+}
