@@ -16,11 +16,18 @@ class WelcomeViewController: UIViewController {
     }()
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = true
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         navigationController?.isNavigationBarHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         view = welcomeScreen
         welcomeScreen.buildHierarchy()
     }

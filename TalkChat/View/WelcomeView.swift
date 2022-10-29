@@ -36,13 +36,14 @@ class WelcomeView: UIView {
         textField.placeholder = "Senha"
         textField.textAlignment = .center
         textField.borderStyle = .none
+        
         return textField
     }()
     
     let emailView: UIView = {
        let emailView = UIView()
         emailView.backgroundColor = .white
-        emailView.layer.cornerRadius = 35
+        emailView.layer.cornerRadius = 30
         return emailView
     }()
     
@@ -50,7 +51,7 @@ class WelcomeView: UIView {
        let passwordView = UIView()
         
         passwordView.backgroundColor = .white
-        passwordView.layer.cornerRadius = 35
+        passwordView.layer.cornerRadius = 30
         return passwordView
     }()
     
@@ -133,31 +134,33 @@ class WelcomeView: UIView {
             emailView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 18),
             emailView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 39),
             emailView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -39),
-            emailView.heightAnchor.constraint(equalToConstant: 69),
+            emailView.heightAnchor.constraint(equalToConstant: 59),
             emailView.widthAnchor.constraint(equalToConstant: 336),
             
-            emailTextField.topAnchor.constraint(equalTo: emailView.topAnchor, constant: -8),
+            emailTextField.topAnchor.constraint(equalTo: emailView.topAnchor, constant: 8),
             emailTextField.leadingAnchor.constraint(equalTo: emailView.leadingAnchor, constant: -9),
             emailTextField.trailingAnchor.constraint(equalTo: emailView.trailingAnchor, constant: -9),
-            emailTextField.heightAnchor.constraint(equalToConstant: 85),
+            emailTextField.bottomAnchor.constraint(equalTo: emailView.bottomAnchor, constant: -8),
+            emailTextField.heightAnchor.constraint(equalToConstant: 60),
             
             passwordView.topAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 30),
             passwordView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 39),
             passwordView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -39),
-            passwordView.heightAnchor.constraint(equalToConstant: 69),
+            passwordView.heightAnchor.constraint(equalToConstant: 59),
             passwordView.widthAnchor.constraint(equalToConstant: 336),
             
-            passwordTextField.topAnchor.constraint(equalTo: passwordView.topAnchor, constant: -8),
+            passwordTextField.topAnchor.constraint(equalTo: passwordView.topAnchor, constant: 8),
             passwordTextField.leadingAnchor.constraint(equalTo: passwordView.leadingAnchor, constant: -9),
             passwordTextField.trailingAnchor.constraint(equalTo: passwordView.trailingAnchor, constant: -9),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 85),
+            passwordTextField.bottomAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: -8),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 60),
             
             loginButton.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 25),
             loginButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 42),
             loginButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -42),
             loginButton.heightAnchor.constraint(equalToConstant: 54),
             
-            registerStackView.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 4),
+            registerStackView.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 18),
             registerStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 50),
             registerStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -54),
            // registerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -18)

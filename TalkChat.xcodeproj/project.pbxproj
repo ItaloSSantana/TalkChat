@@ -15,6 +15,7 @@
 		6452EA5D290C55B200FCFA37 /* TalkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA5C290C55B200FCFA37 /* TalkChatTests.swift */; };
 		6452EA68290C55B200FCFA37 /* TalkChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA67290C55B200FCFA37 /* TalkChatUITests.swift */; };
 		648CF9DD290C91A4006DDB25 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */; };
+		648CF9E2290C9470006DDB25 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CF9E1290C9470006DDB25 /* RegisterView.swift */; };
 		64B03FCE290C718200FE3BD8 /* Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B03FCD290C718200FE3BD8 /* Hexadecimal.swift */; };
 		64B8F45A290C586D00904602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64B8F459290C586D00904602 /* GoogleService-Info.plist */; };
 		64B8F45F290C5B0A00904602 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8F45E290C5B0A00904602 /* WelcomeView.swift */; };
@@ -54,6 +55,7 @@
 		6452EA67290C55B200FCFA37 /* TalkChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkChatUITests.swift; sourceTree = "<group>"; };
 		6452EA69290C55B200FCFA37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		648CF9E1290C9470006DDB25 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		64B03FCD290C718200FE3BD8 /* Hexadecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexadecimal.swift; sourceTree = "<group>"; };
 		64B8F459290C586D00904602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64B8F45E290C5B0A00904602 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				64B8F45E290C5B0A00904602 /* WelcomeView.swift */,
+				648CF9E1290C9470006DDB25 /* RegisterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				648CF9DD290C91A4006DDB25 /* RegisterViewController.swift in Sources */,
 				6452EA46290C55AE00FCFA37 /* AppDelegate.swift in Sources */,
 				64B03FCE290C718200FE3BD8 /* Hexadecimal.swift in Sources */,
+				648CF9E2290C9470006DDB25 /* RegisterView.swift in Sources */,
 				6452EA48290C55AE00FCFA37 /* SceneDelegate.swift in Sources */,
 				64B8F45F290C5B0A00904602 /* WelcomeView.swift in Sources */,
 			);
