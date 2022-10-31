@@ -6,12 +6,40 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseCore
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
     
+    let registerView: RegisterView = {
+        let screenActions = RegisterView()
+        screenActions.registerButton.addTarget(self, action: #selector(registerButton), for: .touchUpInside)
+        return screenActions
+    }()
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view = registerView
+        navigationController?.navigationBar.barTintColor = .white
+        ref = Database.database().reference()
+        registerView.buildHierarchy()
     }
     
+    
+    @objc func registerButton() {
+        if let email = registerView.emailTextField.text, let password = registerView.passwordTextField.text, let username = registerView.userTextField.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let erro = error {
+                    print(erro)
+                } else {
+                    if let uid = Auth.auth().currentUser?.uid {
+                        self.ref.child("users").child(uid).setValue(["username": username])
+                        print("Conta criada")
+                    }
+                }
+            }
+        }
+    }
 }
