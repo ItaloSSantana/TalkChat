@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseCore
+import FirebaseAuth
 
 class WelcomeViewController: UIViewController {
 
     lazy var welcomeScreen: WelcomeView = {
         let screenActions = WelcomeView()
         screenActions.registerButton.addTarget(self, action: #selector(registerPressed), for: .touchUpInside)
+        screenActions.loginButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
         return screenActions
     }()
     
@@ -36,6 +40,18 @@ class WelcomeViewController: UIViewController {
         print("Registro")
         let registerViewController = RegisterViewController()
         self.navigationController?.pushViewController(registerViewController, animated: true)
+    }
+    
+    @objc func loginPressed() {
+        if let email = welcomeScreen.emailTextField.text, let password = welcomeScreen.passwordTextField.text {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let e = error {
+                print(e)
+            } else {
+                print("Logado")
+            }
+        }
+        }
     }
     
 }
