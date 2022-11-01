@@ -21,11 +21,14 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        navigationController?.navigationBar.barTintColor = .systemGray6
         
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.isToolbarHidden = false
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        
         navigationController?.isNavigationBarHidden = false
     }
     
@@ -48,7 +51,8 @@ class WelcomeViewController: UIViewController {
             if let e = error {
                 print(e)
             } else {
-                print("Logado")
+                let menuViewController = MenuViewController()
+                self.navigationController?.pushViewController(menuViewController, animated: true)
             }
         }
         }

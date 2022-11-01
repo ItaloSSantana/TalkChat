@@ -137,10 +137,10 @@ class WelcomeView: UIView {
             emailView.heightAnchor.constraint(equalToConstant: 59),
             emailView.widthAnchor.constraint(equalToConstant: 336),
             
-            emailTextField.topAnchor.constraint(equalTo: emailView.topAnchor, constant: 8),
-            emailTextField.leadingAnchor.constraint(equalTo: emailView.leadingAnchor, constant: -9),
-            emailTextField.trailingAnchor.constraint(equalTo: emailView.trailingAnchor, constant: -9),
-            emailTextField.bottomAnchor.constraint(equalTo: emailView.bottomAnchor, constant: -8),
+            emailTextField.topAnchor.constraint(equalTo: emailView.topAnchor, constant: 5),
+            emailTextField.leadingAnchor.constraint(equalTo: emailView.leadingAnchor, constant: 5),
+            emailTextField.trailingAnchor.constraint(equalTo: emailView.trailingAnchor, constant: -5),
+            emailTextField.bottomAnchor.constraint(equalTo: emailView.bottomAnchor, constant: -5),
             emailTextField.heightAnchor.constraint(equalToConstant: 60),
             
             passwordView.topAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 30),
@@ -149,10 +149,10 @@ class WelcomeView: UIView {
             passwordView.heightAnchor.constraint(equalToConstant: 59),
             passwordView.widthAnchor.constraint(equalToConstant: 336),
             
-            passwordTextField.topAnchor.constraint(equalTo: passwordView.topAnchor, constant: 8),
-            passwordTextField.leadingAnchor.constraint(equalTo: passwordView.leadingAnchor, constant: -9),
-            passwordTextField.trailingAnchor.constraint(equalTo: passwordView.trailingAnchor, constant: -9),
-            passwordTextField.bottomAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: -8),
+            passwordTextField.topAnchor.constraint(equalTo: passwordView.topAnchor, constant: 5),
+            passwordTextField.leadingAnchor.constraint(equalTo: passwordView.leadingAnchor, constant: 5),
+            passwordTextField.trailingAnchor.constraint(equalTo: passwordView.trailingAnchor, constant: -5),
+            passwordTextField.bottomAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: -5),
             passwordTextField.heightAnchor.constraint(equalToConstant: 60),
             
             loginButton.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 25),

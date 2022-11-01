@@ -36,7 +36,8 @@ class RegisterViewController: UIViewController {
                 } else {
                     if let uid = Auth.auth().currentUser?.uid {
                         self.ref.child("users").child(uid).setValue(["username": username])
-                        print("Conta criada")
+                        let menuViewController = MenuViewController()
+                        self.navigationController?.pushViewController(menuViewController, animated: true)
                     }
                 }
             }
