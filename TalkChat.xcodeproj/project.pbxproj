@@ -17,6 +17,7 @@
 		6452EA52290C55B100FCFA37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6452EA50290C55B100FCFA37 /* LaunchScreen.storyboard */; };
 		6452EA5D290C55B200FCFA37 /* TalkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA5C290C55B200FCFA37 /* TalkChatTests.swift */; };
 		6452EA68290C55B200FCFA37 /* TalkChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA67290C55B200FCFA37 /* TalkChatUITests.swift */; };
+		64570C342914377B00EDD580 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64570C332914377B00EDD580 /* ChatView.swift */; };
 		648CF9DD290C91A4006DDB25 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */; };
 		648CF9E2290C9470006DDB25 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CF9E1290C9470006DDB25 /* RegisterView.swift */; };
 		64B03FCE290C718200FE3BD8 /* Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B03FCD290C718200FE3BD8 /* Hexadecimal.swift */; };
@@ -60,6 +61,7 @@
 		6452EA63290C55B200FCFA37 /* TalkChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6452EA67290C55B200FCFA37 /* TalkChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkChatUITests.swift; sourceTree = "<group>"; };
 		6452EA69290C55B200FCFA37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64570C332914377B00EDD580 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		648CF9E1290C9470006DDB25 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		64B03FCD290C718200FE3BD8 /* Hexadecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexadecimal.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				648CF9E1290C9470006DDB25 /* RegisterView.swift */,
 				6452E28729116C800072871B /* MenuView.swift */,
 				6452E29129118A900072871B /* MenuMessagesCellTableViewCell.swift */,
+				64570C332914377B00EDD580 /* ChatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				6452E28D2911801D0072871B /* MenuViewController.swift in Sources */,
 				6452EA4A290C55AE00FCFA37 /* WelcomeViewController.swift in Sources */,
 				648CF9DD290C91A4006DDB25 /* RegisterViewController.swift in Sources */,
+				64570C342914377B00EDD580 /* ChatView.swift in Sources */,
 				6452EA46290C55AE00FCFA37 /* AppDelegate.swift in Sources */,
 				6452E29229118A900072871B /* MenuMessagesCellTableViewCell.swift in Sources */,
 				6452E28829116C810072871B /* MenuView.swift in Sources */,
