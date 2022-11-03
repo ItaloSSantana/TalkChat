@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import FirebaseCore
+import FirebaseDatabase
 class MenuViewController: UIViewController {
 
     let menuView = MenuView()
@@ -15,6 +17,8 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = menuView
+        menuView.contactsTableView.dataSource = self
+        menuView.contactsTableView.delegate = self
         menuView.buildHierarchy()
     }
 }
@@ -26,12 +30,15 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cellMenu", for: indexPath) as? MenuMessagesCellTableViewCell
-            cell?.buildCellHierarchy()
-            return cell ?? MenuMessagesCellTableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as? MenuMessagesCellTableViewCell {
+            cell.buildCellHierarchy()
+            print("Celula")
+            return cell
         }
+        return UITableViewCell()
     }
-    
+}
+
     
     
     

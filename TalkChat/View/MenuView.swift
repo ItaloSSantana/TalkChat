@@ -12,6 +12,7 @@ class MenuView: UIView {
     let messagesLabel: UILabel = {
       let label = UILabel()
         label.text = "Mensagens"
+        label.font = .systemFont(ofSize: 30)
         return label
     }()
     
@@ -36,7 +37,12 @@ class MenuView: UIView {
     }()
     
     let contactsTableView: UITableView = {
-       let tableView = UITableView()
+        let tableView = UITableView()
+        tableView.rowHeight = 100
+        tableView.isScrollEnabled = true
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .systemGray6
+        tableView.register(MenuMessagesCellTableViewCell.self, forCellReuseIdentifier: MenuMessagesCellTableViewCell.identifier)
         return tableView
     }()
     
@@ -69,7 +75,7 @@ class MenuView: UIView {
         configButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            messagesLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
+            messagesLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             messagesLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             
             searchButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
@@ -79,10 +85,10 @@ class MenuView: UIView {
             
             contactsTableView.topAnchor.constraint(equalTo: searchButton.bottomAnchor, constant: 31),
             contactsTableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            contactsTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0)
+            contactsTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            contactsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
         
         ])
-        
     }
     
 }
