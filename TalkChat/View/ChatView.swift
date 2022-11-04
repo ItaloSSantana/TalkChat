@@ -42,7 +42,7 @@ class ChatView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupChatHierarchy() {
+    func buildChatHierarchy() {
         self.addSubview(chatTableView)
         self.addSubview(sendView)
         sendView.addSubview(sendTextView)

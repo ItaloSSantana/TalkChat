@@ -11,6 +11,6 @@ target 'TalkChat' do
     pod 'FirebaseFirestore'
     pod 'FirebaseDatabase'
     pod 'IQKeyboardManagerSwift', '~> 6.5'
-    pod 'SSNeumorphicView'
     pod 'ShadowView'
+    pod 'MessageKit', '~> 3.0.0'
 end

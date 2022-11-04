@@ -12,7 +12,7 @@ import FirebaseDatabase
 class MenuViewController: UIViewController {
 
     let menuView = MenuView()
-    let menuCell = MenuMessagesCellTableViewCell()
+    let menuCell = MenuTableViewCell()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +30,19 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as? MenuMessagesCellTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as? MenuTableViewCell {
             cell.buildCellHierarchy()
             print("Celula")
             return cell
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatViewController = ChatViewController()
+        navigationController?.pushViewController(chatViewController, animated: true)
+    }
+    
 }
 
     

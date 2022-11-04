@@ -42,7 +42,7 @@ class MenuView: UIView {
         tableView.isScrollEnabled = true
         tableView.separatorStyle = .none
         tableView.backgroundColor = .systemGray6
-        tableView.register(MenuMessagesCellTableViewCell.self, forCellReuseIdentifier: MenuMessagesCellTableViewCell.identifier)
+        tableView.register(MenuTableViewCell.self, forCellReuseIdentifier: MenuTableViewCell.identifier)
         return tableView
     }()
     

@@ -707,6 +707,7 @@ PODS:
     - Libuv-gRPC (= 0.0.10)
   - gRPC-Core/Interface (1.44.0)
   - GTMSessionFetcher/Core (2.1.0)
+  - InputBarAccessoryView (4.2.2)
   - IQKeyboardManagerSwift (6.5.10)
   - leveldb-library (1.22.1)
   - Libuv-gRPC (0.0.10):
@@ -715,6 +716,8 @@ PODS:
   - Libuv-gRPC/Implementation (0.0.10):
     - Libuv-gRPC/Interface (= 0.0.10)
   - Libuv-gRPC/Interface (0.0.10)
+  - MessageKit (3.0.0):
+    - InputBarAccessoryView (~> 4.2.2)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
     - nanopb/encode (= 2.30909.0)
@@ -722,7 +725,6 @@ PODS:
   - nanopb/encode (2.30909.0)
   - PromisesObjC (2.1.1)
   - ShadowView (1.4.3)
-  - SSNeumorphicView (0.1.2)
 
 DEPENDENCIES:
   - CLTypingLabel (~> 0.4.0)
@@ -730,8 +732,8 @@ DEPENDENCIES:
   - FirebaseDatabase
   - FirebaseFirestore
   - IQKeyboardManagerSwift (~> 6.5)
+  - MessageKit (~> 3.0.0)
   - ShadowView
-  - SSNeumorphicView
 
 SPEC REPOS:
   trunk:
@@ -749,13 +751,14 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - InputBarAccessoryView
     - IQKeyboardManagerSwift
     - leveldb-library
     - Libuv-gRPC
+    - MessageKit
     - nanopb
     - PromisesObjC
     - ShadowView
-    - SSNeumorphicView
 
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
@@ -772,14 +775,15 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
+  InputBarAccessoryView: 2b937602598e2fab3149f37f51dd7ad795653812
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
+  MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   ShadowView: d2d92fd2706b3f6a182be2147149db0b1cf7700d
-  SSNeumorphicView: d853ecbeeef231834d8f298eed38c1ceb0a08745
 
-PODFILE CHECKSUM: 46c93fbf5a906bc595372142722b09bb52dc5f6e
+PODFILE CHECKSUM: b94f53b6a03bdc7561522539e3c08250e6bab686
 
 COCOAPODS: 1.11.3
