@@ -25,6 +25,7 @@ class WelcomeView: UIView {
        let textField = UITextField()
         textField.font = .systemFont(ofSize: 23)
         textField.placeholder = "Email"
+        textField.text = "1@2.com"
         textField.textAlignment = .center
         textField.borderStyle = .none
         return textField
@@ -34,6 +35,7 @@ class WelcomeView: UIView {
        let textField = UITextField()
         textField.font = .systemFont(ofSize: 23)
         textField.placeholder = "Senha"
+        textField.text = "123456"
         textField.textAlignment = .center
         textField.borderStyle = .none
         

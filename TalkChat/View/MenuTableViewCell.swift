@@ -48,7 +48,6 @@ class MenuTableViewCell: UITableViewCell {
     }
     
     func buildCellHierarchy() {
-        contentView.backgroundColor = .systemGray6
         contentView.addSubview(contactImageView)
         contentView.addSubview(contactNameLabel)
         contentView.addSubview(messageLabel)

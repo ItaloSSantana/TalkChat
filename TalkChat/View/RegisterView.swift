@@ -80,6 +80,12 @@ class RegisterView: UIView {
         button.layer.masksToBounds = false
         return button
     }()
+    
+    let backgroundImage: UIImageView = {
+       let image = UIImageView()
+        image.image = UIImage(named: K.Images.background2)
+        return image
+    }()
 
     init() {
         super.init(frame: .zero)
@@ -91,6 +97,7 @@ class RegisterView: UIView {
 
     func buildHierarchy() {
         self.backgroundColor = .systemGray6
+        self.addSubview(backgroundImage)
         self.addSubview(createLabel)
         self.addSubview(userView)
         userView.addSubview(userTextField)
@@ -111,6 +118,7 @@ class RegisterView: UIView {
         passwordView.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         registerButton.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
         
@@ -151,7 +159,12 @@ class RegisterView: UIView {
             registerButton.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 30),
             registerButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 60),
             registerButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -60),
-            registerButton.heightAnchor.constraint(equalToConstant: 40)
+            registerButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            backgroundImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+            backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            backgroundImage.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
         ])
     }
 }

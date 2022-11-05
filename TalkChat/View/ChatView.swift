@@ -43,6 +43,7 @@ class ChatView: UIView {
     }
     
     func buildChatHierarchy() {
+       
         self.addSubview(chatTableView)
         self.addSubview(sendView)
         sendView.addSubview(sendTextView)

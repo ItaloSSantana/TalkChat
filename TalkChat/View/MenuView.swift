@@ -16,23 +16,17 @@ class MenuView: UIView {
         return label
     }()
     
-    let searchButton: UIButton = {
-        let button = UIButton(type: .system)
-        return button
-    }()
-    
-    let mainMenuButton: UIButton = {
-        let button = UIButton(type: .system)
-        return button
-    }()
-    
-    let addContactButton: UIButton = {
-        let button = UIButton(type: .system)
-        return button
-    }()
-    
-    let configButton: UIButton = {
-        let button = UIButton(type: .system)
+    let addButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: K.Images.addImage), for: .normal)
+        button.setTitleColor(UIColor(hexaRGBA: K.Colors.mainRed), for: .normal)
+        button.layer.cornerRadius = 50
+        button.clipsToBounds = true
+        button.layer.shadowColor = UIColor(hexaRGBA: K.Colors.mainRed)?.cgColor
+        button.layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
+        button.layer.shadowOpacity = 0.4
+        button.layer.shadowRadius = 8.0
+        button.layer.masksToBounds = false
         return button
     }()
     
@@ -46,6 +40,12 @@ class MenuView: UIView {
         return tableView
     }()
     
+    let backgroundImage: UIImageView = {
+       let image = UIImageView()
+        image.image = UIImage(named: K.Images.background3)
+        return image
+    }()
+    
     init() {
         super.init(frame: .zero)
     }
@@ -55,40 +55,40 @@ class MenuView: UIView {
     }
     
     func buildHierarchy() {
-        self.backgroundColor = .systemGray6
+        self.backgroundColor = .clear
+        self.addSubview(backgroundImage)
         self.addSubview(messagesLabel)
-        self.addSubview(searchButton)
         self.addSubview(contactsTableView)
-       // self.addSubview(mainMenuButton)
-      //  self.addSubview(addContactButton)
-       // self.addSubview(configButton)
+        self.addSubview(addButton)
+        contactsTableView.backgroundColor = .clear
         setupConstraints()
     }
     
     func setupConstraints() {
         
         messagesLabel.translatesAutoresizingMaskIntoConstraints = false
-        searchButton.translatesAutoresizingMaskIntoConstraints = false
+        addButton.translatesAutoresizingMaskIntoConstraints = false
         contactsTableView.translatesAutoresizingMaskIntoConstraints = false
-        mainMenuButton.translatesAutoresizingMaskIntoConstraints = false
-        addContactButton.translatesAutoresizingMaskIntoConstraints = false
-        configButton.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             messagesLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             messagesLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             
-            searchButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
-            searchButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            searchButton.heightAnchor.constraint(equalToConstant: 52),
-            searchButton.widthAnchor.constraint(equalToConstant: 52),
+            addButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            addButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            addButton.heightAnchor.constraint(equalToConstant: 52),
+            addButton.widthAnchor.constraint(equalToConstant: 52),
             
-            contactsTableView.topAnchor.constraint(equalTo: searchButton.bottomAnchor, constant: 31),
+            contactsTableView.topAnchor.constraint(equalTo: messagesLabel.bottomAnchor, constant: 90),
             contactsTableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             contactsTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            contactsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
-        
+            contactsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            
+            backgroundImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+            backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            backgroundImage.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
         ])
     }
-    
 }
