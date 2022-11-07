@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class MenuTableViewCell: UITableViewCell {
 
     static let identifier = "menuCell"
+    
+    //let ref: DatabaseReference!
     
     let contactImageView: UIImageView = {
         let image = UIImageView()
@@ -41,11 +45,25 @@ class MenuTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
             super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+//    func getNames() {
+//        let userRef = self.ref.child("users")
+//      userRef.observeSingleEvent(of: .value) { (snapshot) in
+//        if let oSnapshot = snapshot.children.allObjects as? [DataSnapshot] {
+//            for oSnap in oSnapshot {
+//                if let oValue = oSnap.value {
+//                    print(oValue)
+//                }
+//            }
+//        }
+//      }
+//    }
     
     func buildCellHierarchy() {
         contentView.addSubview(contactImageView)

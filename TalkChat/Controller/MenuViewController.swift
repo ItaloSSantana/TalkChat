@@ -19,7 +19,7 @@ class MenuViewController: UIViewController {
     let menuCell = MenuTableViewCell()
     var ref: DatabaseReference!
     var friendsArray: [FriendModel] = []
-    
+    var uidArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,9 @@ class MenuViewController: UIViewController {
         menuView.contactsTableView.dataSource = self
         menuView.contactsTableView.delegate = self
         ref = Database.database().reference()
+        loadFriends()
         menuView.buildHierarchy()
+        
     }
     
     @objc func getFriends() {
@@ -36,21 +38,9 @@ class MenuViewController: UIViewController {
         let add = UIAlertAction(title: "Adicionar", style: .default, handler: { action in
             if let emailTextfield = alert.textFields?[0] {
                 if let uid = Auth.auth().currentUser?.uid {
-                    let userRef = self.ref.child("users")
-                  userRef.observeSingleEvent(of: .value) { (snapshot) in
-                    if let oSnapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                        for oSnap in oSnapshot {
-                            if let oValue = oSnap.value {
-                                print(oValue)
-                            }
-                        }
-                    }
-                  }
-                    self.ref.child("friends").child(uid).setValue(["email": emailTextfield.text])
+                    self.ref.child("users").child(uid).child("friends").childByAutoId().setValue(["friend": emailTextfield.text])
                 }
             }
-                
-            
         })
         
         let cancel = UIAlertAction(title: "Cancelar", style: .default, handler: { action in
@@ -68,7 +58,30 @@ class MenuViewController: UIViewController {
     })
     
 }
-
+    func loadFriends() {
+        if let uid = Auth.auth().currentUser?.uid {
+            let userRef = self.ref.child("users").child(uid).child("friends")
+            userRef.observeSingleEvent(of: .value) { (snapshot) in
+                for snap in snapshot.children {
+                    if let safeKey = (snap as? DataSnapshot)?.key {
+                        self.uidArray.append(safeKey)
+                    }
+                }
+                self.uidArray.forEach { document in
+                    let friendRef = self.ref.child("users").child(uid).child("friends").child(document)
+                    friendRef.observeSingleEvent(of: .value) { snapshot in
+                        guard let dict = snapshot.value as? [String:Any] else {
+                            print("Error")
+                            return
+                        }
+                        //let user = dict["user"] as? String
+                        let friend = dict["friend"] as? String
+                        print(friend)
+                    }
+                }
+            }
+        }
+    }
 }
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     

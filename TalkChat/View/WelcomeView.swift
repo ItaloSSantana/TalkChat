@@ -38,6 +38,7 @@ class WelcomeView: UIView {
         textField.text = "123456"
         textField.textAlignment = .center
         textField.borderStyle = .none
+        textField.isSecureTextEntry = true
         
         return textField
     }()
