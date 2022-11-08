@@ -18,17 +18,22 @@ class MenuViewController: UIViewController {
     }()
     let menuCell = MenuTableViewCell()
     var ref: DatabaseReference!
-    var friendsArray: [FriendModel] = []
+    var friendsArray: [String] = []
     var uidArray: [String] = []
+    var unsafeFriends: [String] = []
+    
+    var usersArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view = menuView
-       
+        navigationController?.navigationBar.isHidden = true
         menuView.contactsTableView.dataSource = self
         menuView.contactsTableView.delegate = self
         ref = Database.database().reference()
+        print(unsafeFriends.description)
         loadFriends()
+        checkFriend()
         menuView.buildHierarchy()
         
     }
@@ -46,8 +51,8 @@ class MenuViewController: UIViewController {
         let cancel = UIAlertAction(title: "Cancelar", style: .default, handler: { action in
         })
         
-        add.setValue(UIColor(hexaRGBA: K.Colors.mainRed), forKey: "titleTextColor")
-        cancel.setValue(UIColor(hexaRGBA: K.Colors.mainRed), forKey: "titleTextColor")
+        add.setValue(UIColor(hexaRGBA: K.Colors.mainColor), forKey: "titleTextColor")
+        cancel.setValue(UIColor(hexaRGBA: K.Colors.mainColor), forKey: "titleTextColor")
         alert.addTextField { (textfield: UITextField) in
             textfield.placeholder = "Email do amigo"
         }
@@ -59,7 +64,7 @@ class MenuViewController: UIViewController {
     
 }
     func loadFriends() {
-        if let uid = Auth.auth().currentUser?.uid {
+        guard let uid = Auth.auth().currentUser?.uid else{return}
             let userRef = self.ref.child("users").child(uid).child("friends")
             userRef.observeSingleEvent(of: .value) { (snapshot) in
                 for snap in snapshot.children {
@@ -74,12 +79,43 @@ class MenuViewController: UIViewController {
                             print("Error")
                             return
                         }
-                        //let user = dict["user"] as? String
-                        let friend = dict["friend"] as? String
-                        print(friend)
+                        if let friend = dict["friend"] as? String {
+                            self.unsafeFriends.append(friend)
+                            print(self.unsafeFriends.description)
+                        }
                     }
                 }
             }
+    }
+    
+    func checkFriend() {
+        let usersRef = self.ref.child("users")
+        usersRef.observeSingleEvent(of: .value) { (snapshot) in
+            for snap in snapshot.children {
+                if let safeKey = (snap as? DataSnapshot)?.key {
+                    self.usersArray.append(safeKey)
+                }
+            }
+            self.usersArray.forEach { user in
+                let friendRef = self.ref.child("users").child(user)
+                friendRef.observeSingleEvent(of: .value) { (snapshot) in
+                    guard let dict = snapshot.value as? [String: Any] else {
+                        print("Error")
+                        return
+                    }
+                    if let friendEmail = dict["email"] as? String {
+                        
+                    }
+                }
+            }
+//            self.unsafeFriends.forEach { (friend) in
+//                if friendEmail == friend {
+//                    self.friendsArray.append(friendEmail)
+//                  //  print("o email é:\(self.friendsArray.description)")
+//                } else {
+//                 //   print("\(friend) errado")
+//                }
+//            }
         }
     }
 }

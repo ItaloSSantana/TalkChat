@@ -11,7 +11,9 @@ struct K {
    static let registerSegue = "RegisterSegue"
     static let menuSegue = "MenuSegue"
     struct Colors {
-        static let mainRed = "ED7166"
+        static let mainColor = "ED7166"
+        static let black = "000000"
+        static let secondColor = "FFFAFA"
     }
     struct Images {
         static let logoImage = "Talk_Chat__1_-removebg-preview"

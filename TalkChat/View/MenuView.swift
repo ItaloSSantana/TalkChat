@@ -19,10 +19,10 @@ class MenuView: UIView {
     let addButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: K.Images.addImage), for: .normal)
-        button.setTitleColor(UIColor(hexaRGBA: K.Colors.mainRed), for: .normal)
+        button.setTitleColor(UIColor(hexaRGBA: K.Colors.mainColor), for: .normal)
         button.layer.cornerRadius = 50
         button.clipsToBounds = true
-        button.layer.shadowColor = UIColor(hexaRGBA: K.Colors.mainRed)?.cgColor
+        button.layer.shadowColor = UIColor(hexaRGBA: K.Colors.mainColor)?.cgColor
         button.layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
         button.layer.shadowOpacity = 0.4
         button.layer.shadowRadius = 8.0
@@ -63,7 +63,7 @@ class MenuView: UIView {
         contactsTableView.backgroundColor = .clear
         setupConstraints()
     }
-    
+
     func setupConstraints() {
         
         messagesLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -85,7 +85,7 @@ class MenuView: UIView {
             contactsTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             contactsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0),
             
-            backgroundImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+            backgroundImage.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             backgroundImage.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)

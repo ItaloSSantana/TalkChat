@@ -23,8 +23,8 @@ class WelcomeViewController: UIViewController {
         super.viewDidAppear(animated)
         navigationController?.navigationBar.barTintColor = .systemGray6
         
-        navigationController?.isNavigationBarHidden = false
-        navigationController?.isToolbarHidden = false
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.isToolbarHidden = true
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -37,6 +37,7 @@ class WelcomeViewController: UIViewController {
       
         view = welcomeScreen
         welcomeScreen.buildHierarchy()
+        welcomeScreen.setupGradient()
     }
     
     @objc func registerPressed(sender: UIButton) {

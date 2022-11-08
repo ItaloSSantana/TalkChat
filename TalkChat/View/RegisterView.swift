@@ -68,12 +68,12 @@ class RegisterView: UIView {
     let registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Registrar", for: .normal)
-        button.backgroundColor = UIColor(hexaRGBA: K.Colors.mainRed)
+        button.backgroundColor = UIColor(hexaRGBA: K.Colors.mainColor)
         button.tintColor = .white
         button.titleLabel?.font = .systemFont(ofSize: 20)
         button.layer.cornerRadius = 20
         button.clipsToBounds = true
-        button.layer.shadowColor = UIColor(hexaRGBA: K.Colors.mainRed)?.cgColor
+        button.layer.shadowColor = UIColor(hexaRGBA: K.Colors.mainColor)?.cgColor
         button.layer.shadowOffset = CGSize(width: 0.0, height: -2.0)
         button.layer.shadowOpacity = 0.6
         button.layer.shadowRadius = 14.0
