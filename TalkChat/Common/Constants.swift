@@ -21,6 +21,7 @@ struct K {
         static let background1 = "background1"
         static let background2 = "background2"
         static let background3 = "background3"
+        static let degrade = "Degrade1"
     }
 }
 

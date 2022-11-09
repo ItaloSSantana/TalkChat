@@ -37,7 +37,6 @@ class WelcomeViewController: UIViewController {
       
         view = welcomeScreen
         welcomeScreen.buildHierarchy()
-        welcomeScreen.setupGradient()
     }
     
     @objc func registerPressed(sender: UIButton) {
