@@ -77,7 +77,7 @@ class WelcomeView: UIView {
         button.layer.shadowColor = UIColor(hexaRGBA: K.Colors.mainColor)?.cgColor
         button.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
         button.layer.shadowOpacity = 0.5
-        button.layer.shadowRadius = 20.0
+        button.layer.shadowRadius = 5.0
         button.layer.masksToBounds = false
         button.layer.cornerRadius = 22.0
         return button
@@ -90,24 +90,17 @@ class WelcomeView: UIView {
     }()
     
     let registerButton: UIButton = {
-        let button = UIButton(type: .system)
+      let button = UIButton(type: .system)
         button.setTitle("Register", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 20)
+        button.titleLabel?.font = .systemFont(ofSize: 21)
         button.titleLabel?.tintColor = UIColor(hexaRGBA: K.Colors.mainColor)
-//        button.layer.shadowColor = UIColor(hexaRGBA: K.Colors.black)?.cgColor
-//        button.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-//        button.layer.shadowOpacity = 1.0
-//        button.layer.shadowRadius = 0.5
-//        button.layer.masksToBounds = false
-        
         return button
     }()
-    let registerButtonLabel: UILabel = {
-       let label = UILabel()
-        label.text = "Register"
-        label.font = .systemFont(ofSize: 20)
-        label.textColor = .white
-        return label
+
+    let registerView: UIView = {
+       let rView = UIView()
+        rView.backgroundColor = .clear
+        return rView
     }()
     
     let registerStackView: UIStackView = {
@@ -151,10 +144,10 @@ class WelcomeView: UIView {
         self.backgroundColor = UIColor(hexaRGBA: K.Colors.secondColor)
         addSubview(backgroundGradient)
         addSubview(registerStackView)
-        addSubview(whiteView)
-        whiteView.addSubview(logoImageView)
         registerStackView.addArrangedSubview(registerLabel)
         registerStackView.addArrangedSubview(registerButton)
+        addSubview(whiteView)
+        whiteView.addSubview(logoImageView)
         addSubview(emailView)
         emailView.addSubview(emailTextField)
         addSubview(passwordView)
@@ -174,7 +167,7 @@ class WelcomeView: UIView {
         whiteView.translatesAutoresizingMaskIntoConstraints = false
         backgroundGradient.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            
+
             backgroundGradient.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             backgroundGradient.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             backgroundGradient.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
@@ -223,8 +216,6 @@ class WelcomeView: UIView {
             registerStackView.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
             registerStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 92),
             registerStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -96),
-           // registerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -18)
         ])
-        
     }
 }

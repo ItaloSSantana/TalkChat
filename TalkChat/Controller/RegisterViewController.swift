@@ -29,7 +29,8 @@ class RegisterViewController: UIViewController {
     
     
     @objc func registerButton() {
-        if let email = registerView.emailTextField.text, let password = registerView.passwordTextField.text, let username = registerView.userTextField.text {
+        if let email = registerView.emailTextField.text, let password = registerView.passwordTextField.text, let username = registerView.userTextField.text, let rePassword = registerView.rePasswordTextField.text {
+            if password == rePassword {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let erro = error {
                     print(erro)
@@ -39,7 +40,10 @@ class RegisterViewController: UIViewController {
                         let menuViewController = MenuViewController()
                         self.navigationController?.pushViewController(menuViewController, animated: true)
                     }
+                    }
                 }
+            } else {
+                print("Not equal")
             }
         }
     }
