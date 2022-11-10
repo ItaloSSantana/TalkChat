@@ -105,12 +105,14 @@ class WelcomeView: UIView {
     
     let registerStackView: UIStackView = {
        let stack = UIStackView()
-        stack.spacing = 0
+        stack.spacing = 5
         stack.alignment = .fill
         stack.distribution = .fill
         stack.contentMode = .scaleToFill
         return stack
     }()
+    
+    let screenSize: CGRect = UIScreen.main.bounds
     
     let whiteView: UIView = {
        let wView = UIView()
@@ -129,11 +131,26 @@ class WelcomeView: UIView {
     let backgroundGradient: UIImageView = {
        let background = UIImageView()
         background.image = UIImage(named: K.Images.degrade)
+        background.contentMode = .scaleToFill
         return background
     }()
     
+    var viewConstraintSize = 0
+    var logoConstraintSize = 0
+    var roundSize = 0
+    
     init() {
         super.init(frame: .zero)
+        if UIScreen.main.bounds.size.width <= 375 {
+            viewConstraintSize = -45
+            roundSize = 140
+            logoConstraintSize = 60
+        } else {
+            viewConstraintSize = -115
+            roundSize = 160
+            logoConstraintSize = 180
+        }
+        
     }
     
     required init?(coder: NSCoder) {
@@ -153,6 +170,7 @@ class WelcomeView: UIView {
         addSubview(passwordView)
         passwordView.addSubview(passwordTextField)
         addSubview(loginButton)
+        whiteView.layer.cornerRadius = CGFloat(roundSize)
         setupConstraints()
     }
     
@@ -166,6 +184,8 @@ class WelcomeView: UIView {
         registerStackView.translatesAutoresizingMaskIntoConstraints = false
         whiteView.translatesAutoresizingMaskIntoConstraints = false
         backgroundGradient.translatesAutoresizingMaskIntoConstraints = false
+        
+        
         NSLayoutConstraint.activate([
 
             backgroundGradient.topAnchor.constraint(equalTo: topAnchor, constant: 0),
@@ -174,48 +194,47 @@ class WelcomeView: UIView {
             backgroundGradient.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             
             whiteView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
+            whiteView.bottomAnchor.constraint(equalTo: emailView.topAnchor, constant: CGFloat(viewConstraintSize)),
             whiteView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 43),
             whiteView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -43),
             
-            logoImageView.topAnchor.constraint(equalTo: whiteView.topAnchor, constant: 180),
-            logoImageView.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor, constant: 52),
-            logoImageView.trailingAnchor.constraint(equalTo: whiteView.trailingAnchor, constant: -52),
-            logoImageView.bottomAnchor.constraint(equalTo: whiteView.bottomAnchor, constant: -52),
+            logoImageView.topAnchor.constraint(equalTo: whiteView.topAnchor, constant: CGFloat(logoConstraintSize)),
+            //logoImageView.bottomAnchor.constraint(equalTo: whiteView.bottomAnchor, constant: -52),
             logoImageView.heightAnchor.constraint(equalToConstant: 250),
             logoImageView.widthAnchor.constraint(equalToConstant: 250),
+            logoImageView.centerXAnchor.constraint(equalTo: whiteView.centerXAnchor),
             
-            emailView.topAnchor.constraint(equalTo: whiteView.bottomAnchor, constant: 120),
-            emailView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 39),
-            emailView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -38),
+           // emailView.topAnchor.constraint(equalTo: whiteView.bottomAnchor, constant: 120),
+            emailView.bottomAnchor.constraint(equalTo: passwordView.topAnchor, constant: -30),
             emailView.heightAnchor.constraint(equalToConstant: 40),
             emailView.widthAnchor.constraint(equalToConstant: 336),
+            emailView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
-            emailTextField.topAnchor.constraint(equalTo: emailView.topAnchor, constant: 5),
-            emailTextField.leadingAnchor.constraint(equalTo: emailView.leadingAnchor, constant: 5),
-            emailTextField.trailingAnchor.constraint(equalTo: emailView.trailingAnchor, constant: -5),
-            emailTextField.bottomAnchor.constraint(equalTo: emailView.bottomAnchor, constant: -5),
+            emailTextField.centerXAnchor.constraint(equalTo: emailView.centerXAnchor),
+            emailTextField.centerYAnchor.constraint(equalTo: emailView.centerYAnchor),
             emailTextField.heightAnchor.constraint(equalToConstant: 60),
             
-            passwordView.topAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 30),
-            passwordView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 39),
-            passwordView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -38),
+           // passwordView.topAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 30),
+            passwordView.bottomAnchor.constraint(equalTo: loginButton.topAnchor, constant: -30),
             passwordView.heightAnchor.constraint(equalToConstant: 40),
             passwordView.widthAnchor.constraint(equalToConstant: 336),
+            passwordView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
-            passwordTextField.topAnchor.constraint(equalTo: passwordView.topAnchor, constant: 5),
-            passwordTextField.leadingAnchor.constraint(equalTo: passwordView.leadingAnchor, constant: 5),
-            passwordTextField.trailingAnchor.constraint(equalTo: passwordView.trailingAnchor, constant: -5),
-            passwordTextField.bottomAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: -5),
             passwordTextField.heightAnchor.constraint(equalToConstant: 60),
+            passwordTextField.centerXAnchor.constraint(equalTo: passwordView.centerXAnchor),
+            passwordTextField.centerYAnchor.constraint(equalTo: passwordView.centerYAnchor),
             
-            loginButton.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 30),
+            //loginButton.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 30),
+            loginButton.bottomAnchor.constraint(equalTo: registerStackView.topAnchor, constant: -30),
             loginButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 42),
             loginButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -42),
             loginButton.heightAnchor.constraint(equalToConstant: 46),
             
-            registerStackView.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
-            registerStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 92),
-            registerStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -96),
+            //registerStackView.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
+            //registerStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 92),
+            //registerStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -96),
+            registerStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            registerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -30)
         ])
     }
 }

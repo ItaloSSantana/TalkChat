@@ -25,6 +25,12 @@ class RegisterViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = .white
         ref = Database.database().reference()
         registerView.buildHierarchy()
+        setupNavigationBarItems()
+    }
+    
+    
+    func setupNavigationBarItems() {
+        print("321321")
     }
     
     

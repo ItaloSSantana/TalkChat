@@ -9,11 +9,10 @@ import UIKit
 
 class RegisterView: UIView {
     
-    let createLabel: UILabel = {
-       let label = UILabel()
-        label.textColor = .white
-        label.textAlignment = .center
-        return label
+    let createImageView: UIImageView = {
+       let image = UIImageView()
+        image.image = UIImage(named: K.Images.createAccount)
+        return image
     }()
     
     let strokeTextAttributes = [
@@ -130,6 +129,19 @@ class RegisterView: UIView {
         image.image = UIImage(named: K.Images.degrade2)
         return image
     }()
+    
+    let backgroundView: UIView = {
+       let bView = UIView()
+        bView.backgroundColor = .white
+        bView.clipsToBounds = true
+        bView.layer.cornerRadius = 80
+        bView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        bView.layer.shadowColor = UIColor(hexaRGBA: K.Colors.mainColor)?.cgColor
+        bView.layer.shadowOffset = CGSize(width: 0.0, height: 20.0)
+        bView.layer.shadowOpacity = 0.5
+        bView.layer.shadowRadius = 20.0
+        return bView
+    }()
 
     init() {
         super.init(frame: .zero)
@@ -140,24 +152,24 @@ class RegisterView: UIView {
     }
 
     func buildHierarchy() {
-        self.backgroundColor = .systemGray6
-        self.addSubview(backgroundImage)
-        self.addSubview(createLabel)
-        createLabel.attributedText = NSMutableAttributedString(string: "Create your account!", attributes: strokeTextAttributes)
-        self.addSubview(userView)
+        self.backgroundColor = .white
+        self.addSubview(createImageView)
+        self.addSubview(backgroundView)
+        backgroundView.addSubview(backgroundImage)
+        backgroundView.addSubview(userView)
         userView.addSubview(userTextField)
-        self.addSubview(emailView)
+        backgroundView.addSubview(emailView)
         emailView.addSubview(emailTextField)
-        self.addSubview(passwordView)
+        backgroundView.addSubview(passwordView)
         passwordView.addSubview(passwordTextField)
-        self.addSubview(rePasswordView)
+        backgroundView.addSubview(rePasswordView)
         rePasswordView.addSubview(rePasswordTextField)
-        self.addSubview(registerButton)
+        backgroundView.addSubview(registerButton)
         setupConstraints()
     }
     
     func setupConstraints() {
-        createLabel.translatesAutoresizingMaskIntoConstraints = false
+        createImageView.translatesAutoresizingMaskIntoConstraints = false
         userView.translatesAutoresizingMaskIntoConstraints = false
         userTextField.translatesAutoresizingMaskIntoConstraints = false
         emailView.translatesAutoresizingMaskIntoConstraints = false
@@ -168,14 +180,20 @@ class RegisterView: UIView {
         rePasswordTextField.translatesAutoresizingMaskIntoConstraints = false
         registerButton.translatesAutoresizingMaskIntoConstraints = false
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
-        
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-        
-            createLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 39),
-            createLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 55),
-            createLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -55),
+            createImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            createImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 55),
+//            createImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -55),
+            createImageView.heightAnchor.constraint(equalToConstant: 175),
+            createImageView.widthAnchor.constraint(equalToConstant: 300),
             
-            userView.topAnchor.constraint(equalTo: createLabel.bottomAnchor, constant: 47.5),
+            backgroundView.topAnchor.constraint(equalTo: createImageView.bottomAnchor, constant: 50),
+            backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -0),
+            backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            
+            userView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 67.5),
             userView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 67),
             userView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -66),
             userView.heightAnchor.constraint(equalToConstant: 40),
@@ -215,15 +233,15 @@ class RegisterView: UIView {
             rePasswordTextField.trailingAnchor.constraint(equalTo: rePasswordView.trailingAnchor, constant: -5),
             rePasswordTextField.bottomAnchor.constraint(equalTo: rePasswordView.bottomAnchor, constant: -5),
             
-            registerButton.topAnchor.constraint(equalTo: rePasswordView.bottomAnchor, constant: 30),
+            registerButton.topAnchor.constraint(equalTo: rePasswordView.bottomAnchor, constant: 90),
             registerButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 60),
             registerButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -60),
             registerButton.heightAnchor.constraint(equalToConstant: 40),
             
-            backgroundImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
-            backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            backgroundImage.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
+            backgroundImage.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 0),
+            backgroundImage.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 0),
+            backgroundImage.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: 0),
+            backgroundImage.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: 0)
         ])
     }
 }
