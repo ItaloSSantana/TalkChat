@@ -150,7 +150,6 @@ class WelcomeView: UIView {
             roundSize = 160
             logoConstraintSize = 180
         }
-        
     }
     
     required init?(coder: NSCoder) {

@@ -143,13 +143,27 @@ class RegisterView: UIView {
         return bView
     }()
 
+    var viewConstraintSize = 0.0
+    var registerSize = 0.0
+    var logoConstraintSize = 0.0
+    
     init() {
         super.init(frame: .zero)
+        if UIScreen.main.bounds.size.width <= 375 {
+            viewConstraintSize = 15
+            registerSize = 30
+            logoConstraintSize = 15
+        } else {
+            viewConstraintSize = 50
+            registerSize = 90
+            logoConstraintSize = 40
+        
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+
 
     func buildHierarchy() {
         self.backgroundColor = .white
@@ -182,21 +196,21 @@ class RegisterView: UIView {
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            createImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            createImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: CGFloat(logoConstraintSize)),
             createImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 55),
 //            createImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -55),
             createImageView.heightAnchor.constraint(equalToConstant: 175),
             createImageView.widthAnchor.constraint(equalToConstant: 300),
             
-            backgroundView.topAnchor.constraint(equalTo: createImageView.bottomAnchor, constant: 50),
+            backgroundView.topAnchor.constraint(equalTo: createImageView.bottomAnchor, constant: CGFloat(viewConstraintSize)),
             backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -0),
             backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             
             userView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 67.5),
-            userView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 67),
-            userView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -66),
+            userView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
             userView.heightAnchor.constraint(equalToConstant: 40),
+            userView.widthAnchor.constraint(equalToConstant: 336),
             
             userTextField.topAnchor.constraint(equalTo: userView.topAnchor, constant: 5),
             userTextField.leadingAnchor.constraint(equalTo: userView.leadingAnchor, constant:  5),
@@ -204,9 +218,9 @@ class RegisterView: UIView {
             userTextField.bottomAnchor.constraint(equalTo: userView.bottomAnchor, constant: -5),
             
             emailView.topAnchor.constraint(equalTo: userView.bottomAnchor, constant: 30),
-            emailView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 67),
-            emailView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -66),
+            emailView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
             emailView.heightAnchor.constraint(equalToConstant: 40),
+            emailView.widthAnchor.constraint(equalToConstant: 336),
             
             emailTextField.topAnchor.constraint(equalTo: emailView.topAnchor, constant: 5),
             emailTextField.leadingAnchor.constraint(equalTo: emailView.leadingAnchor, constant: 5),
@@ -214,9 +228,9 @@ class RegisterView: UIView {
             emailTextField.bottomAnchor.constraint(equalTo: emailView.bottomAnchor, constant: -5),
             
             passwordView.topAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 30),
-            passwordView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 67),
-            passwordView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -66),
+            passwordView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
             passwordView.heightAnchor.constraint(equalToConstant: 40),
+            passwordView.widthAnchor.constraint(equalToConstant: 336),
             
             passwordTextField.topAnchor.constraint(equalTo: passwordView.topAnchor, constant: 5),
             passwordTextField.leadingAnchor.constraint(equalTo: passwordView.leadingAnchor, constant: 5),
@@ -224,16 +238,16 @@ class RegisterView: UIView {
             passwordTextField.bottomAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: -5),
             
             rePasswordView.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 30),
-            rePasswordView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 67),
-            rePasswordView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -66),
+            rePasswordView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
             rePasswordView.heightAnchor.constraint(equalToConstant: 40),
+            rePasswordView.widthAnchor.constraint(equalToConstant: 336),
             
             rePasswordTextField.topAnchor.constraint(equalTo: rePasswordView.topAnchor, constant: 5),
             rePasswordTextField.leadingAnchor.constraint(equalTo: rePasswordView.leadingAnchor, constant: 5),
             rePasswordTextField.trailingAnchor.constraint(equalTo: rePasswordView.trailingAnchor, constant: -5),
             rePasswordTextField.bottomAnchor.constraint(equalTo: rePasswordView.bottomAnchor, constant: -5),
             
-            registerButton.topAnchor.constraint(equalTo: rePasswordView.bottomAnchor, constant: 90),
+            registerButton.topAnchor.constraint(equalTo: rePasswordView.bottomAnchor, constant: CGFloat(registerSize)),
             registerButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 60),
             registerButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -60),
             registerButton.heightAnchor.constraint(equalToConstant: 40),
@@ -245,3 +259,4 @@ class RegisterView: UIView {
         ])
     }
 }
+    
