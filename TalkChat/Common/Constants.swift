@@ -11,19 +11,19 @@ struct K {
    static let registerSegue = "RegisterSegue"
     static let menuSegue = "MenuSegue"
     struct Colors {
-        static let mainColor = "ED7166"
+        static let mainColor = "66EC5B"
         static let black = "000000"
         static let secondColor = "FFFAFA"
     }
     struct Images {
-        static let logoImage = "Talk_Chat__1_-removebg-preview"
+        static let logoImage = "logogreen"
         static let addImage = "+ (2)"
         static let background1 = "background1"
         static let background2 = "background2"
         static let background3 = "background3"
-        static let degrade = "Degrade1"
-        static let degrade2 = "Degrade3"
-        static let createAccount = "CreateAccount"
+        static let degrade = "Green2"
+        static let degrade2 = "Green2"
+        static let createAccount = "create4"
     }
 }
 
