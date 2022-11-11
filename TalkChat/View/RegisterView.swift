@@ -166,7 +166,7 @@ class RegisterView: UIView {
 
 
     func buildHierarchy() {
-        self.backgroundColor = .white
+        self.backgroundColor = UIColor(hexaRGBA: K.Colors.secondColor)
         self.addSubview(createImageView)
         self.addSubview(backgroundView)
         backgroundView.addSubview(backgroundImage)
