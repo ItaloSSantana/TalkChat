@@ -17,10 +17,12 @@ struct K {
     }
     struct Images {
         static let logoImage = "logodarkblue"
-        static let addImage = "+ (2)"
+        static let addImage = "darkBluePlus"
+        static let searchImage = "darkBlueSearch"
+        static let msgImage = "MessagesBlack"
         static let background1 = "background1"
         static let background2 = "background2"
-        static let background3 = "background3"
+        static let background3 = "azul6"
         static let degrade = "azul3"
         static let degrade2 = "azul6"
         static let createAccount = "createdarkblue"

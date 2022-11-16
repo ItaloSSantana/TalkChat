@@ -22,6 +22,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = registerView
+        navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.barTintColor = .white
         ref = Database.database().reference()
         registerView.buildHierarchy()

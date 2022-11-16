@@ -17,7 +17,7 @@ class MenuTableViewCell: UITableViewCell {
     
     let contactImageView: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "Talk_Chat__1_-removebg-preview")
+        image.image = UIImage(named: K.Images.logoImage)
         image.layer.cornerRadius = 50
         image.clipsToBounds = true
         return image

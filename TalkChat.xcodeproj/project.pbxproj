@@ -13,7 +13,6 @@
 		6452EA46290C55AE00FCFA37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA45290C55AE00FCFA37 /* AppDelegate.swift */; };
 		6452EA48290C55AE00FCFA37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA47290C55AE00FCFA37 /* SceneDelegate.swift */; };
 		6452EA4A290C55AE00FCFA37 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA49290C55AE00FCFA37 /* WelcomeViewController.swift */; };
-		6452EA4F290C55B100FCFA37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6452EA4E290C55B100FCFA37 /* Assets.xcassets */; };
 		6452EA52290C55B100FCFA37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6452EA50290C55B100FCFA37 /* LaunchScreen.storyboard */; };
 		6452EA5D290C55B200FCFA37 /* TalkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA5C290C55B200FCFA37 /* TalkChatTests.swift */; };
 		6452EA68290C55B200FCFA37 /* TalkChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA67290C55B200FCFA37 /* TalkChatUITests.swift */; };
@@ -22,6 +21,7 @@
 		645CA8B72915867400E5EAA5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CA8B62915867400E5EAA5 /* ChatViewController.swift */; };
 		645CA8BC2915879C00E5EAA5 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CA8BB2915879C00E5EAA5 /* ChatTableViewCell.swift */; };
 		645EFB5C2919AC59004651DB /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645EFB5B2919AC59004651DB /* Temp.swift */; };
+		646BB64D2924514E008110EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646BB64C2924514E008110EA /* Assets.xcassets */; };
 		648CF9DD290C91A4006DDB25 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */; };
 		648CF9E2290C9470006DDB25 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CF9E1290C9470006DDB25 /* RegisterView.swift */; };
 		64B03FCE290C718200FE3BD8 /* Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B03FCD290C718200FE3BD8 /* Hexadecimal.swift */; };
@@ -56,7 +56,6 @@
 		6452EA45290C55AE00FCFA37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6452EA47290C55AE00FCFA37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6452EA49290C55AE00FCFA37 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		6452EA4E290C55B100FCFA37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6452EA51290C55B100FCFA37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6452EA53290C55B100FCFA37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6452EA58290C55B200FCFA37 /* TalkChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +69,7 @@
 		645CA8B62915867400E5EAA5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		645CA8BB2915879C00E5EAA5 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		645EFB5B2919AC59004651DB /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		646BB64C2924514E008110EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/TalkChat-main/TalkChat/Assets.xcassets"; sourceTree = "<group>"; };
 		648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		648CF9E1290C9470006DDB25 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		64B03FCD290C718200FE3BD8 /* Hexadecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexadecimal.swift; sourceTree = "<group>"; };
@@ -189,8 +189,8 @@
 				6451312E290C8ED600DAA259 /* Controller */,
 				6452EA45290C55AE00FCFA37 /* AppDelegate.swift */,
 				6452EA47290C55AE00FCFA37 /* SceneDelegate.swift */,
-				6452EA4E290C55B100FCFA37 /* Assets.xcassets */,
 				6452EA50290C55B100FCFA37 /* LaunchScreen.storyboard */,
+				646BB64C2924514E008110EA /* Assets.xcassets */,
 				6452EA53290C55B100FCFA37 /* Info.plist */,
 				64B8F459290C586D00904602 /* GoogleService-Info.plist */,
 			);
@@ -329,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6452EA52290C55B100FCFA37 /* LaunchScreen.storyboard in Resources */,
-				6452EA4F290C55B100FCFA37 /* Assets.xcassets in Resources */,
+				646BB64D2924514E008110EA /* Assets.xcassets in Resources */,
 				64B8F45A290C586D00904602 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

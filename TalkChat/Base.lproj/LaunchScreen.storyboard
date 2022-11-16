@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logogreen" translatesAutoresizingMaskIntoConstraints="NO" id="Ao7-4D-CM1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logodarkblue" translatesAutoresizingMaskIntoConstraints="NO" id="Ao7-4D-CM1">
                                 <rect key="frame" x="53.5" y="324" width="307" height="248"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -39,7 +39,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logogreen" width="500" height="500"/>
+        <image name="logodarkblue" width="166.5" height="166.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

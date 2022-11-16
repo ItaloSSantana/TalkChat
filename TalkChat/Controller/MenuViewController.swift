@@ -24,10 +24,15 @@ class MenuViewController: UIViewController {
     
     var usersArray: [String] = []
     
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.isToolbarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view = menuView
-        navigationController?.navigationBar.isHidden = true
         menuView.contactsTableView.dataSource = self
         menuView.contactsTableView.delegate = self
         ref = Database.database().reference()
