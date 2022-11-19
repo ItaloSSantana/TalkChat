@@ -19,21 +19,53 @@ class RegisterViewController: UIViewController {
     }()
     var ref: DatabaseReference!
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view = registerView
         navigationController?.isNavigationBarHidden = false
-        navigationController?.navigationBar.barTintColor = .white
         ref = Database.database().reference()
         registerView.buildHierarchy()
-        setupNavigationBarItems()
+        setupNavBar()
     }
     
-    
-    func setupNavigationBarItems() {
-        print("321321")
+   func setupNavBar() {
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithDefaultBackground()
+        navigationBarAppearance.backgroundColor = .white
+        navigationBarAppearance.configureWithTransparentBackground()
+        navigationItem.standardAppearance = navigationBarAppearance
+        navigationItem.compactAppearance = navigationBarAppearance
+        navigationItem.scrollEdgeAppearance = navigationBarAppearance
+        navigationItem.hidesBackButton = true
+    SetBackBarButtonCustom()
     }
+     
+    func SetBackBarButtonCustom()
+    {
+        //Back buttion
+        let btnLeftMenu: UIButton = UIButton()
+        btnLeftMenu.setImage(UIImage(named: K.Images.leftArrow), for: UIControl.State())
+        btnLeftMenu.addTarget(self, action: #selector(self.onClcikBack), for: .touchUpInside)
+        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+        
+        btnLeftMenu.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            btnLeftMenu.heightAnchor.constraint(equalToConstant: 35),
+            btnLeftMenu.widthAnchor.constraint(equalToConstant: 35)
+        ])
+        let barButton = UIBarButtonItem(customView: btnLeftMenu)
+        self.navigationItem.leftBarButtonItem = barButton
+    }
+
     
+    @objc func onClcikBack()
+    {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
     
     @objc func registerButton() {
         if let email = registerView.emailTextField.text, let password = registerView.passwordTextField.text, let username = registerView.userTextField.text, let rePassword = registerView.rePasswordTextField.text {

@@ -26,6 +26,7 @@ struct K {
         static let degrade = "azul3"
         static let degrade2 = "azul6"
         static let createAccount = "createdarkblue"
+        static let leftArrow = "left-arrow"
     }
 }
 

@@ -39,9 +39,12 @@ class MenuViewController: UIViewController {
         print(unsafeFriends.description)
         loadFriends()
         checkFriend()
+       
         menuView.buildHierarchy()
         
     }
+    
+  
     
     @objc func getFriends() {
         let alert = UIAlertController(title: "Adicionar amigo.", message: "Insira o email do seu amigo", preferredStyle: .alert)
