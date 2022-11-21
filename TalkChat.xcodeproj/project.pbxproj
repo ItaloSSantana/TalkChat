@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F8D7EB4292C19540077670C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D7EB3292C194F0077670C /* Assets.xcassets */; };
 		6452E28829116C810072871B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E28729116C800072871B /* MenuView.swift */; };
 		6452E28D2911801D0072871B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E28C2911801D0072871B /* MenuViewController.swift */; };
 		6452E29229118A900072871B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E29129118A900072871B /* MenuTableViewCell.swift */; };
@@ -21,7 +22,6 @@
 		645CA8B72915867400E5EAA5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CA8B62915867400E5EAA5 /* ChatViewController.swift */; };
 		645CA8BC2915879C00E5EAA5 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CA8BB2915879C00E5EAA5 /* ChatTableViewCell.swift */; };
 		645EFB5C2919AC59004651DB /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645EFB5B2919AC59004651DB /* Temp.swift */; };
-		646BB64D2924514E008110EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646BB64C2924514E008110EA /* Assets.xcassets */; };
 		648CF9DD290C91A4006DDB25 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */; };
 		648CF9E2290C9470006DDB25 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CF9E1290C9470006DDB25 /* RegisterView.swift */; };
 		64B03FCE290C718200FE3BD8 /* Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B03FCD290C718200FE3BD8 /* Hexadecimal.swift */; };
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F8D7EB3292C194F0077670C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6452E28729116C800072871B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		6452E28C2911801D0072871B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6452E29129118A900072871B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		645CA8B62915867400E5EAA5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		645CA8BB2915879C00E5EAA5 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		645EFB5B2919AC59004651DB /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
-		646BB64C2924514E008110EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/TalkChat-main/TalkChat/Assets.xcassets"; sourceTree = "<group>"; };
 		648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		648CF9E1290C9470006DDB25 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		64B03FCD290C718200FE3BD8 /* Hexadecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexadecimal.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 				6452EA45290C55AE00FCFA37 /* AppDelegate.swift */,
 				6452EA47290C55AE00FCFA37 /* SceneDelegate.swift */,
 				6452EA50290C55B100FCFA37 /* LaunchScreen.storyboard */,
-				646BB64C2924514E008110EA /* Assets.xcassets */,
+				0F8D7EB3292C194F0077670C /* Assets.xcassets */,
 				6452EA53290C55B100FCFA37 /* Info.plist */,
 				64B8F459290C586D00904602 /* GoogleService-Info.plist */,
 			);
@@ -329,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6452EA52290C55B100FCFA37 /* LaunchScreen.storyboard in Resources */,
-				646BB64D2924514E008110EA /* Assets.xcassets in Resources */,
+				0F8D7EB4292C19540077670C /* Assets.xcassets in Resources */,
 				64B8F45A290C586D00904602 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
