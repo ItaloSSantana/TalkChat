@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6D0B4C292D865100BA91E1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D0B4B292D865100BA91E1 /* CustomTabBarController.swift */; };
 		0F8D7EB4292C19540077670C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D7EB3292C194F0077670C /* Assets.xcassets */; };
 		6452E28829116C810072871B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E28729116C800072871B /* MenuView.swift */; };
 		6452E28D2911801D0072871B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E28C2911801D0072871B /* MenuViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F6D0B4B292D865100BA91E1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		0F8D7EB3292C194F0077670C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6452E28729116C800072871B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		6452E28C2911801D0072871B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */,
 				6452E28C2911801D0072871B /* MenuViewController.swift */,
 				645CA8B62915867400E5EAA5 /* ChatViewController.swift */,
+				0F6D0B4B292D865100BA91E1 /* CustomTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				645CA8B72915867400E5EAA5 /* ChatViewController.swift in Sources */,
 				645B27DD29181A570084E02D /* FriendModel.swift in Sources */,
 				645EFB5C2919AC59004651DB /* Temp.swift in Sources */,
+				0F6D0B4C292D865100BA91E1 /* CustomTabBarController.swift in Sources */,
 				648CF9E2290C9470006DDB25 /* RegisterView.swift in Sources */,
 				645CA8BC2915879C00E5EAA5 /* ChatTableViewCell.swift in Sources */,
 				6452EA48290C55AE00FCFA37 /* SceneDelegate.swift in Sources */,
