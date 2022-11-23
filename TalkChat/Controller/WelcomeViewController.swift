@@ -50,7 +50,7 @@ class WelcomeViewController: UIViewController {
             if let e = error {
                 print(e)
             } else {
-                let menuViewController = MenuViewController()
+                let menuViewController = MenuTabBarController()
                 self.navigationController?.pushViewController(menuViewController, animated: true)
             }
         }

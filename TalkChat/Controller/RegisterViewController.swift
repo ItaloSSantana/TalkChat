@@ -76,7 +76,7 @@ class RegisterViewController: UIViewController {
                 } else {
                     if let uid = Auth.auth().currentUser?.uid {
                         self.ref.child("users").child(uid).setValue(["username": username, "email": email, "uid": uid])
-                        let menuViewController = MenuViewController()
+                        let menuViewController = MenuTabBarController()
                         self.navigationController?.pushViewController(menuViewController, animated: true)
                     }
                     }

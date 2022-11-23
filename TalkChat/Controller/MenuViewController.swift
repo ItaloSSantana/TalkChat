@@ -9,6 +9,17 @@ import UIKit
 import FirebaseAuth
 import FirebaseCore
 import FirebaseDatabase
+
+class MenuTabBarController: UITabBarController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let firstVC = FirstController()
+        let secondVC = SecondController()
+        let menuVC = MenuViewController()
+        self.setViewControllers([menuVC,firstVC,secondVC], animated: true)
+    }
+}
+
 class MenuViewController: UIViewController {
 
     let menuView: MenuView = {
@@ -27,7 +38,7 @@ class MenuViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
         navigationController?.isNavigationBarHidden = true
-        navigationController?.isToolbarHidden = false
+        navigationController?.isToolbarHidden = true
     }
     
     override func viewDidLoad() {
@@ -42,7 +53,6 @@ class MenuViewController: UIViewController {
         menuView.buildHierarchy()
     }
     
-  
     @objc func getFriends() {
         let alert = UIAlertController(title: "Adicionar amigo.", message: "Insira o email do seu amigo", preferredStyle: .alert)
         let add = UIAlertAction(title: "Adicionar", style: .default, handler: { action in
@@ -146,5 +156,5 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-    
+
 
