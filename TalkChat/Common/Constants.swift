@@ -27,6 +27,9 @@ struct K {
         static let degrade2 = "azul6"
         static let createAccount = "createdarkblue"
         static let leftArrow = "left-arrow"
+        static let mensageBubble = "Message"
+        static let settings = "Settings"
+        static let logout = "Logout"
     }
 }
 

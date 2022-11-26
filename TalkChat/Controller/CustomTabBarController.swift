@@ -7,11 +7,25 @@
 
 import UIKit
 
-class CustomTabBarController: UITabBarController {
+class MenuTabBarController: UITabBarController {
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let firstVC = FirstController()
+        let secondVC = SecondController()
+        let menuVC = MenuViewController()
+        self.setViewControllers([menuVC,firstVC,secondVC], animated: true)
         
-        self.tabBar.backgroundColor = .blue
+        setupItems()
+    }
+    
+    func setupItems() {
+        guard let items = self.tabBar.items else {return}
+        let images = [K.Images.mensageBubble, K.Images.settings, K.Images.logout]
+   
+        for x in 0...2 {
+            items[x].image = UIImage(named: images[x])
+        }
     }
 }
