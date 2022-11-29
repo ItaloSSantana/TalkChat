@@ -46,7 +46,6 @@ class RegisterViewController: UIViewController {
      
     func SetBackBarButtonCustom()
     {
-        //Back buttion
         let btnLeftMenu: UIButton = UIButton()
         btnLeftMenu.setImage(UIImage(named: K.Images.leftArrow), for: UIControl.State())
         btnLeftMenu.addTarget(self, action: #selector(self.onClcikBack), for: .touchUpInside)
