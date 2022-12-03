@@ -67,22 +67,38 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func registerButton() {
+        
         if let email = registerView.emailTextField.text, let password = registerView.passwordTextField.text, let username = registerView.userTextField.text, let rePassword = registerView.rePasswordTextField.text {
-            if password == rePassword {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let erro = error {
-                    print(erro)
-                } else {
-                    if let uid = Auth.auth().currentUser?.uid {
-                        self.ref.child("users").child(uid).setValue(["username": username, "email": email, "uid": uid])
-                        let menuViewController = MenuTabBarController()
-                        self.navigationController?.pushViewController(menuViewController, animated: true)
-                    }
-                    }
+            DatabaseManager.shared.userExists(with: email) {[weak self] exists in
+                guard let strongSelf = self else {return}
+                guard !exists else {
+                    strongSelf.errorAlert(message: "Email already exists")
+                    return
                 }
-            } else {
-                print("Not equal")
+                if password == rePassword {
+                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                    if let erro = error {
+                        strongSelf.errorAlert(message: erro.localizedDescription)
+                        print(erro)
+                    } else {
+                        if let uid = Auth.auth().currentUser?.uid {
+                            DatabaseManager.shared.insertUser(user: ChatAppUser(userName: username, emailAddress: email))
+                            let menuViewController = MenuTabBarController()
+                            strongSelf.navigationController?.pushViewController(menuViewController, animated: true)
+                        }
+                        }
+                    }
+                } else {
+                    strongSelf.errorAlert(message: "Passwords doesn't match")
+                    print("Not equal")
+                }
             }
         }
+    }
+    
+    func errorAlert(message: String = "Cannot Create Account") {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        present(alert, animated: true)
     }
 }

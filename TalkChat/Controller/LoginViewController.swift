@@ -10,7 +10,7 @@ import FirebaseDatabase
 import FirebaseCore
 import FirebaseAuth
 
-class WelcomeViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     lazy var welcomeScreen: WelcomeView = {
         let screenActions = WelcomeView()

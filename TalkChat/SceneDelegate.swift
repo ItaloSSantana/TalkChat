@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
 
     let navigationController = UINavigationController()
-     navigationController.pushViewController(WelcomeViewController(), animated: true)
+        navigationController.pushViewController(MenuTabBarController(), animated: true)
     window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
     }

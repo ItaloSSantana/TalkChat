@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F564907293BBCE000B14402 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F564906293BBCE000B14402 /* DatabaseManager.swift */; };
 		0F5CB83C292EDDF800250407 /* TestViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5CB83B292EDDF800250407 /* TestViewControllers.swift */; };
-		0F6D0B4C292D865100BA91E1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D0B4B292D865100BA91E1 /* CustomTabBarController.swift */; };
+		0F6D0B4C292D865100BA91E1 /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D0B4B292D865100BA91E1 /* MenuTabBarController.swift */; };
 		0F8D7EB4292C19540077670C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D7EB3292C194F0077670C /* Assets.xcassets */; };
 		6452E28829116C810072871B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E28729116C800072871B /* MenuView.swift */; };
 		6452E28D2911801D0072871B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E28C2911801D0072871B /* MenuViewController.swift */; };
 		6452E29229118A900072871B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E29129118A900072871B /* MenuTableViewCell.swift */; };
 		6452EA46290C55AE00FCFA37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA45290C55AE00FCFA37 /* AppDelegate.swift */; };
 		6452EA48290C55AE00FCFA37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA47290C55AE00FCFA37 /* SceneDelegate.swift */; };
-		6452EA4A290C55AE00FCFA37 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA49290C55AE00FCFA37 /* WelcomeViewController.swift */; };
+		6452EA4A290C55AE00FCFA37 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA49290C55AE00FCFA37 /* LoginViewController.swift */; };
 		6452EA52290C55B100FCFA37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6452EA50290C55B100FCFA37 /* LaunchScreen.storyboard */; };
 		6452EA5D290C55B200FCFA37 /* TalkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA5C290C55B200FCFA37 /* TalkChatTests.swift */; };
 		6452EA68290C55B200FCFA37 /* TalkChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452EA67290C55B200FCFA37 /* TalkChatUITests.swift */; };
@@ -51,8 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F564906293BBCE000B14402 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0F5CB83B292EDDF800250407 /* TestViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewControllers.swift; sourceTree = "<group>"; };
-		0F6D0B4B292D865100BA91E1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		0F6D0B4B292D865100BA91E1 /* MenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarController.swift; sourceTree = "<group>"; };
 		0F8D7EB3292C194F0077670C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6452E28729116C800072871B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		6452E28C2911801D0072871B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 		6452EA42290C55AE00FCFA37 /* TalkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6452EA45290C55AE00FCFA37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6452EA47290C55AE00FCFA37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6452EA49290C55AE00FCFA37 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		6452EA49290C55AE00FCFA37 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6452EA51290C55B100FCFA37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6452EA53290C55B100FCFA37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6452EA58290C55B200FCFA37 /* TalkChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,11 +125,11 @@
 		6451312E290C8ED600DAA259 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6452EA49290C55AE00FCFA37 /* WelcomeViewController.swift */,
+				6452EA49290C55AE00FCFA37 /* LoginViewController.swift */,
 				648CF9DC290C91A4006DDB25 /* RegisterViewController.swift */,
 				6452E28C2911801D0072871B /* MenuViewController.swift */,
 				645CA8B62915867400E5EAA5 /* ChatViewController.swift */,
-				0F6D0B4B292D865100BA91E1 /* CustomTabBarController.swift */,
+				0F6D0B4B292D865100BA91E1 /* MenuTabBarController.swift */,
 				0F5CB83B292EDDF800250407 /* TestViewControllers.swift */,
 			);
 			path = Controller;
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				645B27DC29181A570084E02D /* FriendModel.swift */,
+				0F564906293BBCE000B14402 /* DatabaseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,7 +408,7 @@
 			files = (
 				64B8F464290C5B3100904602 /* Constants.swift in Sources */,
 				6452E28D2911801D0072871B /* MenuViewController.swift in Sources */,
-				6452EA4A290C55AE00FCFA37 /* WelcomeViewController.swift in Sources */,
+				6452EA4A290C55AE00FCFA37 /* LoginViewController.swift in Sources */,
 				648CF9DD290C91A4006DDB25 /* RegisterViewController.swift in Sources */,
 				0F5CB83C292EDDF800250407 /* TestViewControllers.swift in Sources */,
 				64570C342914377B00EDD580 /* ChatView.swift in Sources */,
@@ -416,7 +419,8 @@
 				645CA8B72915867400E5EAA5 /* ChatViewController.swift in Sources */,
 				645B27DD29181A570084E02D /* FriendModel.swift in Sources */,
 				645EFB5C2919AC59004651DB /* Temp.swift in Sources */,
-				0F6D0B4C292D865100BA91E1 /* CustomTabBarController.swift in Sources */,
+				0F6D0B4C292D865100BA91E1 /* MenuTabBarController.swift in Sources */,
+				0F564907293BBCE000B14402 /* DatabaseManager.swift in Sources */,
 				648CF9E2290C9470006DDB25 /* RegisterView.swift in Sources */,
 				645CA8BC2915879C00E5EAA5 /* ChatTableViewCell.swift in Sources */,
 				6452EA48290C55AE00FCFA37 /* SceneDelegate.swift in Sources */,
