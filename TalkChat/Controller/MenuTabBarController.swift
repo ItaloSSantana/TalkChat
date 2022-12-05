@@ -18,7 +18,7 @@ class MenuTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let firstVC = FirstController()
+        let firstVC = SettingsViewController()
         let menuVC = MenuViewController()
         let tabBarAppearence = UITabBarAppearance()
         tabBarAppearence.backgroundColor = .white
