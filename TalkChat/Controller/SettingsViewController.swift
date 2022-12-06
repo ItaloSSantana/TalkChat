@@ -31,7 +31,6 @@ class SettingsViewController: UIViewController {
         setupTableView()
     }
     
-    
     func setupHierarchy() {
         view.addSubview(titleLabel)
         view.addSubview(settingsTableView)

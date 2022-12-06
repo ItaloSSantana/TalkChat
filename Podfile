@@ -13,4 +13,5 @@ target 'TalkChat' do
     pod 'IQKeyboardManagerSwift', '~> 6.5'
     pod 'ShadowView'
     pod 'MessageKit', '~> 3.0.0'
+    pod 'SnapKit', '~> 5.6.0'
 end

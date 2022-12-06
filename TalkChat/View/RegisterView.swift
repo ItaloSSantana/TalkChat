@@ -164,7 +164,6 @@ class RegisterView: UIView {
             fatalError("init(coder:) has not been implemented")
         }
 
-
     func buildHierarchy() {
         self.backgroundColor = .white
         self.addSubview(createImageView)
