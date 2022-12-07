@@ -143,6 +143,18 @@ class WelcomeView: UIView {
         return background
     }()
    
+    let google: ButtonInsertIcon = {
+        let button = ButtonInsertIcon(title: "Google", icon: K.Images.logout)
+        
+        return button
+    }()
+    
+    let facebook: ButtonInsertIcon = {
+        let button = ButtonInsertIcon(title: "Facebook", icon: K.Images.logout)
+        
+        return button
+    }()
+    
     var viewConstraintSize = 0
     var logoConstraintSize = 0
     var roundSize = 0
@@ -179,11 +191,13 @@ class WelcomeView: UIView {
         addSubview(loginButton)
        // addSubview(googleLogin)
        // addSubview(facebookLogin)
-        addSubview(loginStack)
-        let google = ButtonInsertIcon(title: "Google", icon: K.Images.logout)
-        loginStack.addArrangedSubview(google)
-        let facebook = ButtonInsertIcon(title: "Facebook", icon: K.Images.settings)
-        loginStack.addArrangedSubview(facebook)
+        //addSubview(loginStack)
+        addSubview(google)
+        addSubview(facebook)
+//        let google = ButtonInsertIcon(title: "Google", icon: K.Images.logout)
+//        loginStack.addArrangedSubview(google)
+//        let facebook = ButtonInsertIcon(title: "Facebook", icon: K.Images.settings)
+//        loginStack.addArrangedSubview(facebook)
         whiteView.layer.cornerRadius = CGFloat(roundSize)
         setupConstraints()
     }
@@ -198,9 +212,8 @@ class WelcomeView: UIView {
         registerStackView.translatesAutoresizingMaskIntoConstraints = false
         whiteView.translatesAutoresizingMaskIntoConstraints = false
         backgroundGradient.translatesAutoresizingMaskIntoConstraints = false
-     //   googleLogin.translatesAutoresizingMaskIntoConstraints = false
-     //   facebookLogin.translatesAutoresizingMaskIntoConstraints = false
-        loginStack.translatesAutoresizingMaskIntoConstraints = false
+        google.translatesAutoresizingMaskIntoConstraints = false
+        facebook.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
 
             backgroundGradient.topAnchor.constraint(equalTo: topAnchor, constant: 0),
@@ -249,12 +262,16 @@ class WelcomeView: UIView {
             //registerStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 92),
             //registerStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -96),
             registerStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            registerStackView.bottomAnchor.constraint(equalTo: loginStack.topAnchor, constant: -20),
+            registerStackView.bottomAnchor.constraint(equalTo: google.topAnchor, constant: -20),
     
-            loginStack.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 80),
-            loginStack.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            loginStack.widthAnchor.constraint(equalToConstant: 200)
-         
+            google.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 70),
+            google.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            google.widthAnchor.constraint(equalToConstant: 130),
+            
+            facebook.leadingAnchor.constraint(equalTo: google.trailingAnchor, constant: 10),
+            facebook.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            facebook.widthAnchor.constraint(equalToConstant: 130)
+            
         ])
     }
 }
