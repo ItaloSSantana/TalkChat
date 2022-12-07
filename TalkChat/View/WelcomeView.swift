@@ -111,6 +111,14 @@ class WelcomeView: UIView {
         stack.contentMode = .scaleToFill
         return stack
     }()
+
+    let loginStack: UIStackView = {
+       let stack = UIStackView()
+        stack.spacing = 25
+        stack.alignment = .fill
+        stack.distribution = .fillEqually
+        return stack
+    }()
     
     let screenSize: CGRect = UIScreen.main.bounds
     
@@ -134,7 +142,7 @@ class WelcomeView: UIView {
         background.contentMode = .scaleToFill
         return background
     }()
-    
+   
     var viewConstraintSize = 0
     var logoConstraintSize = 0
     var roundSize = 0
@@ -146,7 +154,7 @@ class WelcomeView: UIView {
             roundSize = 140
             logoConstraintSize = 60
         } else {
-            viewConstraintSize = -115
+            viewConstraintSize = -90
             roundSize = 160
             logoConstraintSize = 180
         }
@@ -169,6 +177,13 @@ class WelcomeView: UIView {
         addSubview(passwordView)
         passwordView.addSubview(passwordTextField)
         addSubview(loginButton)
+       // addSubview(googleLogin)
+       // addSubview(facebookLogin)
+        addSubview(loginStack)
+        let google = ButtonInsertIcon(title: "Google", icon: K.Images.logout)
+        loginStack.addArrangedSubview(google)
+        let facebook = ButtonInsertIcon(title: "Facebook", icon: K.Images.settings)
+        loginStack.addArrangedSubview(facebook)
         whiteView.layer.cornerRadius = CGFloat(roundSize)
         setupConstraints()
     }
@@ -183,8 +198,9 @@ class WelcomeView: UIView {
         registerStackView.translatesAutoresizingMaskIntoConstraints = false
         whiteView.translatesAutoresizingMaskIntoConstraints = false
         backgroundGradient.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+     //   googleLogin.translatesAutoresizingMaskIntoConstraints = false
+     //   facebookLogin.translatesAutoresizingMaskIntoConstraints = false
+        loginStack.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
 
             backgroundGradient.topAnchor.constraint(equalTo: topAnchor, constant: 0),
@@ -224,7 +240,7 @@ class WelcomeView: UIView {
             passwordTextField.centerYAnchor.constraint(equalTo: passwordView.centerYAnchor),
             
             //loginButton.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 30),
-            loginButton.bottomAnchor.constraint(equalTo: registerStackView.topAnchor, constant: -30),
+            loginButton.bottomAnchor.constraint(equalTo: registerStackView.topAnchor, constant: -25),
             loginButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 42),
             loginButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -42),
             loginButton.heightAnchor.constraint(equalToConstant: 46),
@@ -233,7 +249,12 @@ class WelcomeView: UIView {
             //registerStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 92),
             //registerStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -96),
             registerStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            registerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -30)
+            registerStackView.bottomAnchor.constraint(equalTo: loginStack.topAnchor, constant: -20),
+    
+            loginStack.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 80),
+            loginStack.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            loginStack.widthAnchor.constraint(equalToConstant: 200)
+         
         ])
     }
 }

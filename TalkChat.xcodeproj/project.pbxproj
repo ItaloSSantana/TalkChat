@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F564907293BBCE000B14402 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F564906293BBCE000B14402 /* DatabaseManager.swift */; };
 		0F5CB83C292EDDF800250407 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5CB83B292EDDF800250407 /* SettingsViewController.swift */; };
+		0F660B022940025100EBBCE9 /* ButtonInsertIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F660B012940025100EBBCE9 /* ButtonInsertIcon.swift */; };
 		0F6D0B4C292D865100BA91E1 /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D0B4B292D865100BA91E1 /* MenuTabBarController.swift */; };
 		0F8D7EB4292C19540077670C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D7EB3292C194F0077670C /* Assets.xcassets */; };
 		6452E28829116C810072871B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E28729116C800072871B /* MenuView.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		0F564906293BBCE000B14402 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0F5CB83B292EDDF800250407 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0F660B012940025100EBBCE9 /* ButtonInsertIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonInsertIcon.swift; sourceTree = "<group>"; };
 		0F6D0B4B292D865100BA91E1 /* MenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarController.swift; sourceTree = "<group>"; };
 		0F8D7EB3292C194F0077670C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6452E28729116C800072871B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				6452E29129118A900072871B /* MenuTableViewCell.swift */,
 				64570C332914377B00EDD580 /* ChatView.swift */,
 				645CA8BB2915879C00E5EAA5 /* ChatTableViewCell.swift */,
+				0F660B012940025100EBBCE9 /* ButtonInsertIcon.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				645CA8BC2915879C00E5EAA5 /* ChatTableViewCell.swift in Sources */,
 				6452EA48290C55AE00FCFA37 /* SceneDelegate.swift in Sources */,
 				64B8F45F290C5B0A00904602 /* WelcomeView.swift in Sources */,
+				0F660B022940025100EBBCE9 /* ButtonInsertIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
