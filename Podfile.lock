@@ -603,6 +603,14 @@ PODS:
     - BoringSSL-GRPC/Interface (= 0.0.24)
   - BoringSSL-GRPC/Interface (0.0.24)
   - CLTypingLabel (0.4.0)
+  - FBAEMKit (12.3.2):
+    - FBSDKCoreKit_Basics (= 12.3.2)
+  - FBSDKCoreKit (12.3.2):
+    - FBAEMKit (= 12.3.2)
+    - FBSDKCoreKit_Basics (= 12.3.2)
+  - FBSDKCoreKit_Basics (12.3.2)
+  - FBSDKLoginKit (12.3.2):
+    - FBSDKCoreKit (= 12.3.2)
   - FirebaseAuth (9.6.0):
     - FirebaseCore (~> 9.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
@@ -729,6 +737,7 @@ PODS:
 
 DEPENDENCIES:
   - CLTypingLabel (~> 0.4.0)
+  - FBSDKLoginKit
   - FirebaseAuth
   - FirebaseDatabase
   - FirebaseFirestore
@@ -742,6 +751,10 @@ SPEC REPOS:
     - abseil
     - BoringSSL-GRPC
     - CLTypingLabel
+    - FBAEMKit
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
+    - FBSDKLoginKit
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
@@ -767,6 +780,10 @@ SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
   BoringSSL-GRPC: 3175b25143e648463a56daeaaa499c6cb86dad33
   CLTypingLabel: 95a7d1faf7e3d1d952cd11cb0491d17d80c50934
+  FBAEMKit: 955ca52eba8219c20f90774e8c6ff8bc7b3192a3
+  FBSDKCoreKit: 678f64eda3f0ff25c189c2ebbfe87b1d96a85a6d
+  FBSDKCoreKit_Basics: 6bee7c1f0932432901781203fa5e587ec5099148
+  FBSDKLoginKit: 56d55e23fe66a6db045826190b0b4dbc0e1ca0a0
   FirebaseAuth: e4a5d3c36e778e41141b91cc861103a441d80bcc
   FirebaseCore: 2082fffcd855f95f883c0a1641133eb9bbe76d40
   FirebaseCoreDiagnostics: 99a495094b10a57eeb3ae8efa1665700ad0bdaa6
@@ -788,6 +805,6 @@ SPEC CHECKSUMS:
   ShadowView: d2d92fd2706b3f6a182be2147149db0b1cf7700d
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 51f365c8c11b1c26b7a60535b3f5b9bf739a18b1
+PODFILE CHECKSUM: 85bbc98cfba3fc598596572e3e7b89796dcac15a
 
 COCOAPODS: 1.11.3

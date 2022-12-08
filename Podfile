@@ -14,4 +14,6 @@ target 'TalkChat' do
     pod 'ShadowView'
     pod 'MessageKit', '~> 3.0.0'
     pod 'SnapKit', '~> 5.6.0'
+    pod 'FBSDKLoginKit'
+    
 end
